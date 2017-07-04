@@ -32,10 +32,13 @@ public class CounterActivity extends AppCompatActivity {
         String input = inputEditText.getText().toString();
         Log.d(getClass().toString(), "The input given was '" + input + "'");
         Counter counter = new Counter(input);
-        String result = counter.getInput();
-        HashMap<String, Integer> hash = result.frequency();
+        int result = counter.countWords();
         resultText.setText(result);
+        //currently breaks/force closes app instead of showing int
 
-        //can't set frequency method
+        //HashMap<String, Integer> hash = result.frequency();
+        // can't set frequency method
+
+
     }
 }
