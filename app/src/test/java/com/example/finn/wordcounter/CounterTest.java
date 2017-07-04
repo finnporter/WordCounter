@@ -42,6 +42,7 @@ public class CounterTest {
     @Test
     public void inputIsCorrectFormat() {
         assertEquals("however it didnt work", counter.getInputInCorrectFormat());
+        assertEquals(4, counter.countWords());
     }
 
 

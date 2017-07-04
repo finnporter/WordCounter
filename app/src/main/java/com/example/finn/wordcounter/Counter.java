@@ -1,5 +1,7 @@
 package com.example.finn.wordcounter;
 
+import java.util.HashMap;
+
 /**
  * Created by Finn on 04/07/2017.
  */
@@ -25,5 +27,10 @@ public class Counter {
 
     public String getInputInCorrectFormat() {
         return this.input.replaceAll("[^a-zA-Z ]", "").toLowerCase();
+    }
+
+    public HashMap<String, Integer> frequency() {
+        HashMap<String, Integer> results = new HashMap<>();
+
     }
 }
