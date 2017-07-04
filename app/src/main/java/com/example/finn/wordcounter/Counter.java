@@ -10,10 +10,20 @@ public class Counter {
 
     public Counter(String input) {
         this.input = input;
-        this.words = input.split(" ");
+        this.words = input.split("\\s+");
+        //replaceAll("[^a-zA-Z ]", "").toLowerCase()
+        //not sure how exactly this works. thanks StackOverflow.
     }
 
     public String getInput() {
-        return input;
+        return this.input;
+    }
+
+    public int countWords() {
+        return this.words.length;
+    }
+
+    public String getInputInCorrectFormat() {
+        return this.input.replaceAll("[^a-zA-Z ]", "").toLowerCase();
     }
 }
