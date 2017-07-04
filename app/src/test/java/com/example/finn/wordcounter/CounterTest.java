@@ -45,5 +45,11 @@ public class CounterTest {
         assertEquals(4, counter.countWords());
     }
 
+    //@Test
+    public void canReturnFrequency() {
+        Counter counter = new Counter("Lorem ipsum, ipsum dolor sinum pret pret.");
+
+    }
+
 
 }

@@ -31,6 +31,17 @@ public class Counter {
 
     public HashMap<String, Integer> frequency() {
         HashMap<String, Integer> results = new HashMap<>();
+        for (int num = 0; num < words.length; num++) {
+            if (results.containsKey(words[num])) {
+                Integer count = results.get(words[num]);
+                results.put(words[num], count + 1);
+            }
+            else {
+                results.put(words[num], 1);
+            }
+
+        }
+        return results;
 
     }
 }
