@@ -5,4 +5,15 @@ package com.example.finn.wordcounter;
  */
 
 public class Counter {
+    private String input;
+    private String[] words;
+
+    public Counter(String input) {
+        this.input = input;
+        this.words = input.split(" ");
+    }
+
+    public String getInput() {
+        return input;
+    }
 }
