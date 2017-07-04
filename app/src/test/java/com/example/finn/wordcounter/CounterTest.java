@@ -3,6 +3,8 @@ package com.example.finn.wordcounter;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -45,10 +47,15 @@ public class CounterTest {
         assertEquals(4, counter.countWords());
     }
 
-    //@Test
+    @Test
     public void canReturnFrequency() {
-        Counter counter = new Counter("Lorem ipsum, ipsum dolor sinum pret pret.");
+        Counter counter = new Counter("Lorem ipsum ipsum");
+        HashMap<String, Integer> result = new HashMap<>();
+        result.put("Lorem", 1);
+        result.put("ipsum", 2);
+        assertEquals(result, counter.frequency());
 
+        //don't know how to call getInputInCorrectFormat on counter first...
     }
 
 
