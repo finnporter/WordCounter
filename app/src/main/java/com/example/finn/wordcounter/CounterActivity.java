@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 public class CounterActivity extends AppCompatActivity {
 
     EditText inputEditText;
@@ -29,5 +31,11 @@ public class CounterActivity extends AppCompatActivity {
         Log.d(getClass().toString(), "onCountButtonClicked was called");
         String input = inputEditText.getText().toString();
         Log.d(getClass().toString(), "The input given was '" + input + "'");
+        Counter counter = new Counter(input);
+        String result = counter.getInput();
+        HashMap<String, Integer> hash = result.frequency();
+        resultText.setText(result);
+
+        //can't set frequency method
     }
 }
